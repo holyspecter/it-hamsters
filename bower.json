@@ -1,0 +1,20 @@
+{
+  "name": "it-hamsters",
+  "version": "0.0.0",
+  "homepage": "https://github.com/holyspecter/it-hamsters",
+  "authors": [
+    "hospect <hospect@gmail.com>"
+  ],
+  "description": "Improving IT skills daily",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}

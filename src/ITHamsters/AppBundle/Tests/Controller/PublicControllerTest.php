@@ -21,7 +21,9 @@ class PublicControllerTest extends WebTestCase
     public function pagesProvider()
     {
         return [
-            [ '/' ],
+            ['/'],
+            ['/login'],
+            ['/register/'],
         ];
     }
 }

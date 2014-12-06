@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "IT Hamsters",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Improving IT skills daily",
     "autoload": {
         "psr-0": { "": "src/", "SymfonyStandard": "app/" }
     },

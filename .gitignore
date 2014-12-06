@@ -11,3 +11,5 @@
 /bin/
 /composer.phar
 /.idea
+/web/components/*
+!/web/components/.gitkeep
