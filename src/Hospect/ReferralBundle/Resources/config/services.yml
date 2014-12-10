@@ -8,10 +8,17 @@ services:
             - @=service('security.token_storage').getToken().getUser()
             - @router
 
+    hospect.referral_parameter_listener:
+        class: Hospect\ReferralBundle\EventListener\ReferralParameterListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest }
+
     hospect.referable_event_subscriber:
         class: Hospect\ReferralBundle\EventListener\ReferableEventSubscriber
         arguments:
             - @hospect.code_generator
+        calls:
+            - [setRequest, [@=service('request_stack').getMasterRequest()]]
         tags:
             - { name: doctrine.event_subscriber, connection: default }
 
