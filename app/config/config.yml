@@ -65,6 +65,10 @@ doctrine:
         auto_mapping: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
 
+        resolve_target_entities:
+            Hospect\ReferralBundle\Entity\ReferableInterface: ITHamsters\AppBundle\Entity\User
+            Hospect\ReferralBundle\Entity\RefererAwareInterface: Hospect\ReferralBundle\Entity\Referral
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: "%mailer_transport%"

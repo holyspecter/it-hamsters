@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             new \FOS\UserBundle\FOSUserBundle(),
+            new \Hospect\ReferralBundle\HospectReferralBundle(),
 
             new ITHamsters\AppBundle\ITHamstersAppBundle(),
         );
