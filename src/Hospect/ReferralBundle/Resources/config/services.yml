@@ -1,2 +1,19 @@
-#services:
-    #todo
+parameters:
+    hospect.code_generator.class: Hospect\ReferralBundle\Referral\CodeGenerator
+
+services:
+    hospect.referable_aware_router:
+        class: Hospect\ReferralBundle\Referral\ReferableAwareRouter
+        arguments:
+            - @=service('security.token_storage').getToken().getUser()
+            - @router
+
+    hospect.referable_event_subscriber:
+        class: Hospect\ReferralBundle\EventListener\ReferableEventSubscriber
+        arguments:
+            - @hospect.code_generator
+        tags:
+            - { name: doctrine.event_subscriber, connection: default }
+
+    hospect.code_generator:
+        class: %hospect.code_generator.class%

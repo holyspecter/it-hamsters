@@ -10,10 +10,12 @@ use Symfony\Component\HttpFoundation\Request;
 class PublicController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="ith.homepage")
      */
     public function indexAction(Request $request)
     {
-        return $this->render('ITHamstersAppBundle:Public:index.html.twig');
+        return $this->render('ITHamstersAppBundle:Public:index.html.twig', [
+            'referral_url' => $this->get('hospect.referable_aware_router')->generate('ith.homepage'),
+        ]);
     }
 }
